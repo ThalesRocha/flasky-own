@@ -22,7 +22,7 @@ def index():
                            'mail/new_user', user=user)
         else:
             session['known'] = True
-        session['name'] = form.name.data
+            session['name'] = form.name.data
         return redirect(url_for('.index'))
     return render_template('index.html',
                            form=form, name=session.get('name'),
